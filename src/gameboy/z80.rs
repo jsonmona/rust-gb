@@ -852,7 +852,7 @@ impl Z80 where {
                 }
             },
             Instruction::INVALID => {
-                panic!(format!("Invalid opcode: {:#04x} on {:04x}!", opcode, self.pc));
+                panic!("Invalid opcode: {:#04x} on {:04x}!", opcode, self.pc);
             },
             Instruction::PREFIX => unreachable!()
         }
